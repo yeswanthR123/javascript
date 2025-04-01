@@ -78,10 +78,22 @@
 5.+,-
 */
 
-console.log(2**1**3); // here the execution start from the right to left so, 2^(1^3)
-console.log(2+4+4-2);// right to left because +,- has the same level of precedence
-console.log(2*4+3+2+2);// * has the higher precedence then the +,- so it will be executed first follow by addition and subtraction
+// console.log(2**1**3); // here the execution start from the right to left so, 2^(1^3)
+// console.log(2+4+4-2);// right to left because +,- has the same level of precedence
+// console.log(2*4+3+2+2);// * has the higher precedence then the +,- so it will be executed first follow by addition and subtraction
 
+//string-template literals
+
+const fullName = "Yami Sukehiro";
+
+const yami = "I'm " + fullName +" captain of Black Bulls";
+console.log(yami);
+
+// to use template literals use   `` backtick
+const newYami = `I'm ${fullName} captain of Black Bulls`;
+console.log(newYami);   
+console.log(`we can use backtick to write normal para also,
+multiline para`);
 
 
 
