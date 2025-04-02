@@ -97,14 +97,61 @@
 
 //if-else 
 
-let age = 18;
-if(age >= 18){
-    console.log("You are eligible for the voting");
+// let age = 18;
+// if(age >= 18){
+//     console.log("You are eligible for the voting");
 
+// }else{
+//     console.log("You are not eligible for the voting");
+// }
+
+//Type conversion and coercion 
+
+// const birthYear = '2003';
+// console.log(birthYear+10); // output : 200310;
+// console.log(Number(birthYear)+10); // output : 2013
+// console.log(Number("hello")); // output : NaN
+// console.log(typeof NaN); // output : number
+
+// // to covert the string to number use Number()
+// // to convert the Number to string use String()
+
+// const luckyNo = 77;
+// console.log(String(luckyNo)+birthYear);
+
+// //javascript do type coercion automatically
+
+// console.log("I'm "+ 21 + " old"); // here javascript automatically convert the Number 23 to string And only the "+" operator will convert number to the string
+// console.log("21"/'21'); // output : 1 because any arithematic operation except addition performed string -> number
+// console.log(21+true); // here the boolean true is convert to the number with the value of 1 so 21 +1 = 22 as output
+
+// console.log('21'+6-90+"1");
+
+
+
+// // falsy values : 0, '', NaN, Undefined, null
+// if('' || 0){
+//     console.log("One or more condition is true");
+// }else{
+//     console.log("All condition are false");
+// }
+
+
+// equality operator == or === and !== or !=
+
+// 18 === 18 output : true , it not allow type conversion
+// 18 == '18' output : true , allow type conversion
+
+
+//WE can get the input from the user by prompt 
+
+// let currDate = prompt("Enter the current date");
+// console.log(currDate);
+
+//logical operators : ||, &&, !
+
+if(true  true){
+    console.log("true");
 }else{
-    console.log("You are not eligible for the voting");
+    console.log("false");
 }
-
-
-
-
