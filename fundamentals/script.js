@@ -156,3 +156,58 @@
 //     console.log("false");
 // }
 
+// switch case:
+let day = "friday";
+// switch(day){
+//     case 'monday':
+//         console.log("attend ground driving class");
+//         console.log("watch anime");
+//         break;
+//     case "tuesday":
+//         console.log("attend the driving class");
+//         console.log("help mom");
+//         break;
+//     case "wednesday":
+//         console.log("no driving class today");
+//         console.log("take rest");
+//         break;
+//     case "thursday":
+//     case "friday":
+//         console.log("attend driving class");
+//         console.log("play the mech arena and win");
+//         console.log("watch latest movies");
+//         break;
+//     case "saturday":
+//         console.log("today no non-veg");
+//         console.log("complete the learning process");
+//         console.log("go walking");
+//         break;
+//     case "sunday":
+//         console.log("sunday is holiday");
+//         console.log("eat well and sleep well");
+//         console.log("call the driving class master and ask for tomorrow class");
+//         break;
+//     default:
+//         console.log("enter the valid day and also use lowercase alphabets");
+// }
+
+// if(day === "monday"){
+//     console.log("do homework");
+
+// }else if(day === "tuesday" || day === 'wednesday'){
+//     console.log("do nothing");
+// }else if(day === "thurday" || day === "friday"){
+//     console.log("time to do something");
+
+// }else if(day === "sunday"|| day === "saturday"){
+//     console.log("take reset");
+// }else{
+//     console.log("invalid input");
+// }
+
+//conditional operator (Ternary operator)
+
+//syntax : (condition) ? (true statement) : (false statement)
+
+// let age = 80;
+// age>=40? console.log("your senior citizen") : console.log("your not a senior citizen");
