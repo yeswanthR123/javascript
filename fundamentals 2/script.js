@@ -56,5 +56,37 @@
 // }
 // console.log(adder());
 
-// Arrays
+// Arrays - it can store element from the different datatypes
+// it follow 0 based indexing and it not support negative indexing
+
+// const friends = ["cat","dog","cow"];
+// console.log(friends)
+
+// const arr =  new Array(1990,1998,1888);
+// console.log(arr[0]) // output 1990
+// console.log(friends[friends.length -1]); // outpute : cow
+// friends[0] = "bull";
+// console.log(friends)
+
+// let firstName = "Yami";
+// const details = [firstName, "sukehiro", 2025-2003, friends];
+// console.log(details[3])
+
+
+// Basic Array methods
+
+const things = ['car', 'bike', 'cloths', 'mobile'];
+console.log(things);
+things.push("mouse"); // push the value to the end of the array and it also return the lenght of the array
+console.log(things)
+
+things.unshift("house"); // unshift use to add element at the begining
+console.log(things);
+console.log(things.pop()); // remove the last element of the array and it return the removed element
+console.log(things);
+console.log(things.shift()); // remove the first element of the array and it return the removed element
+console.log(things);
+console.log(things.indexOf('car')); // return the index of the element if it present else it return -1
+console.log(things.includes("cloths")) // return true if the element present the array else false
+console.log();
 
