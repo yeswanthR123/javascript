@@ -84,16 +84,27 @@
 
 //string-template literals
 
-const fullName = "Yami Sukehiro";
+// const fullName = "Yami Sukehiro";
 
-const yami = "I'm " + fullName +" captain of Black Bulls";
-console.log(yami);
+// const yami = "I'm " + fullName +" captain of Black Bulls";
+// console.log(yami);
 
-// to use template literals use   `` backtick
-const newYami = `I'm ${fullName} captain of Black Bulls`;
-console.log(newYami);   
-console.log(`we can use backtick to write normal para also,
-multiline para`);
+// // to use template literals use   `` backtick
+// const newYami = `I'm ${fullName} captain of Black Bulls`;
+// console.log(newYami);   
+// console.log(`we can use backtick to write normal para also,
+// multiline para`);
+
+//if-else 
+
+let age = 18;
+if(age >= 18){
+    console.log("You are eligible for the voting");
+
+}else{
+    console.log("You are not eligible for the voting");
+}
+
 
 
 
