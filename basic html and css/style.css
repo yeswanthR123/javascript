@@ -1,0 +1,13 @@
+body {
+  background-color: rgb(25, 43, 37);
+  font-family: Arial;
+  color: azure;
+}
+
+.first {
+  background-color: black;
+}
+#user-name {
+  background-color: blanchedalmond;
+  border: 2px solid red;
+}
