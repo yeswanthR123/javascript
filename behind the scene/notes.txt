@@ -1,0 +1,57 @@
+js Engine - program that execute javascript code
+js Engine contains:
+    1.call Stack - where the code get executed by the "execution context"
+    2.Heap - where the object are stored and memory need for the execution
+
+google chrome use - v8 engine for the javascript
+
+javascript  uses JIT 'just-in-time' compilation - the code is compiled to machine code and executed immediately
+
+js Engine working:
+
+    1.parsing :
+        during the pursing process the code to converted to the data structure tree called AST (Adstract Syntax Tree)
+    2.compilation:
+        Take the AST and compile the code.
+
+       2.1:optimization:
+            During the execution of the code the process 2,2.1,3 are repeatedly executed for the better performance
+    3.Execution:
+        Take place in the call stack
+    
+JAVASCRIPT RUNTIME in web browser's:
+    Javascript Engine
+    Web API - liks DOM's,Timer,Fatch API
+    CallBack Queue - like EventListener
+
+
+
+Scope chain:
+ it consist of:
+    global scope
+    function scope
+    block scope - introduced in the ES6 (ONLY THE "LET" AND "CONST" keyword are use to declare the block scope variables)
+
+
+-all the child block/fucntion can access the variable/arugument of the parent block/functions
+-"var" scope variable not have the block scope functionality
+
+
+#memory management:
+
+-in javascript memory are automatically manage using memeory lifecycle
+    1.memory allocation
+    2.memory use
+    3.memeory release
+
+# How to copy the object to another variable
+ - we use "{...obj}" to copy the object -- also know as shallow copy it will not copy all the object only the first level of the object
+ - structuredClone method can be use to deep clone a object in all the level 
+
+
+ #Memory Management and Garbage Collection#
+ -primitive variable will be stored in the stack and it will be released after execution
+ -object will be stored in the heap which will be release by the garbage collection by the javascript engine automatically
+    -It uses mark and sweep algorithm
+
+-memory leaks -> when an object is no longer need but it still present in the heap 
