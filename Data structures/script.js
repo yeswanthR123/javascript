@@ -48,31 +48,45 @@ const restaurant = {
   },
 };
 
-//Array destructuring
+// object destructuring
 
-const arr = [1, 2, 3, 4];
-let [a, b, c, d] = arr;
-console.log(a, b, c, d);
+//here we use the property name to destructure the object;
+const { name, categories, openingHours } = restaurant;
+console.log(name, categories, openingHours);
 
-//here second value in the array is skiped
-let [first, , third] = restaurant.categories;
-
-console.log(first, third);
-
-// to swap to values
-[first, third] = [third, first];
-console.log(first, third);
-// returning two value from function
-const [starter, main] = restaurant.order(1, 2);
-
-console.log(starter, main);
-
-// array destructuring in 2d array
-
-const arr2 = [2, 3, 4, [22, 3, 3]];
-const [x, , , [y, z, i]] = arr2;
-console.log(x, y, z, i);
+//destructuring variable name can be changed
+const { name: Name, catgories: catlog, openingHours: open } = restaurant;
+console.log(Name, catlog, open);
 
 // default values
-const [q = 1, w = 1, , , e = 1] = arr2; // the array length is small so the e will not get assigned to any value so it default value will be stored which i 1
-console.log(q, w, e);
+const { menu: menus = [], mainMenu: mMenu = [] } = restaurant;
+console.log(menus, mMenu); // here the menu is not in object so a empty array is return in menus variable
+
+// //Array destructuring
+
+// const arr = [1, 2, 3, 4];
+// let [a, b, c, d] = arr;
+// console.log(a, b, c, d);
+
+// //here second value in the array is skiped
+// let [first, , third] = restaurant.categories;
+
+// console.log(first, third);
+
+// // to swap to values
+// [first, third] = [third, first];
+// console.log(first, third);
+// // returning two value from function
+// const [starter, main] = restaurant.order(1, 2);
+
+// console.log(starter, main);
+
+// // array destructuring in 2d array
+
+// const arr2 = [2, 3, 4, [22, 3, 3]];
+// const [x, , , [y, z, i]] = arr2;
+// console.log(x, y, z, i);
+
+// // default values
+// const [q = 1, w = 1, , , e = 1] = arr2; // the array length is small so the e will not get assigned to any value so it default value will be stored which i 1
+// console.log(q, w, e);
