@@ -32,6 +32,11 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery: function ({ starterIndex, mainIndex, time, addr = "Nan" }) {
+    console.log(
+      `Your order ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${addr} at ${time}`
+    );
+  },
   openingHours: {
     thu: {
       open: 12,
@@ -55,12 +60,39 @@ const { name, categories, openingHours } = restaurant;
 console.log(name, categories, openingHours);
 
 //destructuring variable name can be changed
-const { name: Name, catgories: catlog, openingHours: open } = restaurant;
-console.log(Name, catlog, open);
+// const { name: Name, catgories: catlog, openingHours: open } = restaurant;
+// console.log(Name, catlog, open);
 
 // default values
 const { menu: menus = [], mainMenu: mMenu = [] } = restaurant;
 console.log(menus, mMenu); // here the menu is not in object so a empty array is return in menus variable
+
+// mutating variables
+const simp = { a: 77, b: 44, c: 40 };
+let a = 10;
+let b = 20;
+console.log(a, b);
+// if () is not used below it will act as a block and throws a error "=" unexpected token
+({ a, b } = simp); // a,b global value are changed to simp objects values
+console.log(a, b);
+
+// Nested Ojbects
+//here from the openingHours object which is destructure from the restaurant
+// contains nested objects and it is destructured
+const {
+  thu: { open: o, close: c }, // thu is object inside the openingHours and has to properties
+} = openingHours;
+console.log(o, c);
+
+//Example for destructuring:
+restaurant.orderDelivery({
+  time: "12:20",
+  addr: "periyar street",
+  starterIndex: 1,
+  mainIndex: 0,
+});
+
+restaurant.orderDelivery({ time: "22:20", starterIndex: 0, mainIndex: 1 });
 
 // //Array destructuring
 
