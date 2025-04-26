@@ -63,39 +63,39 @@ const restaurant = {
   },
 };
 
-//REST pattern and parameters - used for collecting unused parameter and values
-// SPREAD, because used in right side of the value sign
-const arr = [1, 2, ...[1, 2, 34, 4]];
-//REST, because used in left side of the value sign to assign value to the array others
-const [a, b, ...others] = arr;
-console.log(a, b, others);
-const [pizza, , Risotto, ...otherMenus] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-]; // pasta from the main menu was skipped which mean REST  will not take the skiped elements
-console.log(otherMenus);
-//objects
+// //REST pattern and parameters - used for collecting unused parameter and values
+// // SPREAD, because used in right side of the value sign
+// const arr = [1, 2, ...[1, 2, 34, 4]];
+// //REST, because used in left side of the value sign to assign value to the array others
+// const [a, b, ...others] = arr;
+// console.log(a, b, others);
+// const [pizza, , Risotto, ...otherMenus] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ]; // pasta from the main menu was skipped which mean REST  will not take the skiped elements
+// console.log(otherMenus);
+// //objects
 
-const { sat, ...weekDays } = restaurant.openingHours;
-console.log(weekDays);
+// const { sat, ...weekDays } = restaurant.openingHours;
+// console.log(weekDays);
 
-//Functions
+// //Functions
 
-const add = function (...nums) {
-  let sum = 0;
-  for (let i = 0; i < nums.length; i++) {
-    sum += nums[i];
-  }
-  console.log(sum);
-};
-add(12, 3, 3, 4, 5, 6);
-add(1, 2);
-add(22, 44, 5, 5, 6);
+// const add = function (...nums) {
+//   let sum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     sum += nums[i];
+//   }
+//   console.log(sum);
+// };
+// add(12, 3, 3, 4, 5, 6);
+// add(1, 2);
+// add(22, 44, 5, 5, 6);
 
-let num = [1, 2, 3, 4];
-add(...num);
+// let num = [1, 2, 3, 4];
+// add(...num);
 
-restaurant.orderPizza("chicken", "onion", "sprint");
+// restaurant.orderPizza("chicken", "onion", "sprint");
 // // object destructuring
 
 // //here we use the property name to destructure the object;
@@ -201,3 +201,15 @@ restaurant.orderPizza("chicken", "onion", "sprint");
 // newRestaurant.name = "Chennai Briyani";
 // restaurant.mainMenu[0] = "pizzaaa";
 // console.log(newRestaurant.name, restaurant.name);
+
+//Short Ciruiting
+//OR || -- stop's at true value
+console.log("hello" || "everyone");
+console.log(null || undefined); // here both the values are false so the last false value is printed
+console.log("" || false || "true" || true || 0); //output "true" because it the first true value in the expression
+
+console.log("-----AND-----");
+
+// AND && -- stop's at the false value
+console.log(0 * "9" && true);
+console.log(4 && 6 && "he" && 10 && "false");
