@@ -202,14 +202,39 @@ const restaurant = {
 // restaurant.mainMenu[0] = "pizzaaa";
 // console.log(newRestaurant.name, restaurant.name);
 
-//Short Ciruiting
-//OR || -- stop's at true value
-console.log("hello" || "everyone");
-console.log(null || undefined); // here both the values are false so the last false value is printed
-console.log("" || false || "true" || true || 0); //output "true" because it the first true value in the expression
+// //Short Ciruiting
+// //OR || -- stop's at true value
+// console.log("hello" || "everyone");
+// console.log(null || undefined); // here both the values are false so the last false value is printed
+// console.log("" || false || "true" || true || 0); //output "true" because it the first true value in the expression
 
-console.log("-----AND-----");
+// console.log("-----AND-----");
 
-// AND && -- stop's at the false value
-console.log(0 * "9" && true);
-console.log(4 && 6 && "he" && 10 && "false");
+// // AND && -- stop's at the false value
+// //evaluate until the true
+// console.log(0 * "9" && true);
+// console.log(4 && 6 && "he" && 90 && "false");
+// //it search for he flasy value if not present print the last value in the execution
+// //practical example
+// if (restaurant.orderPizza) {
+//   console.log(restaurant.orderPizza("rice", "potato"));
+// }
+// console.log(
+//   restaurant.orderPizza &&
+//     restaurant.orderPizza(
+//       "rice",
+//       "potato",
+//       "onion",
+//       "tomato",
+//       "capcium",
+//       "spring onion"
+//     )
+// );
+
+//Nullish coalesing operator (??) == it check for the null or undefine value
+
+restaurant.guest = 0;
+// const guest = restaurant.guest || 10;
+// console.log(guest); // As 0 is false guest is assigned 10 but it not logically correct
+const newGuest = restaurant.guest ?? 10;
+console.log(newGuest); // ?? -- check for the for null or undefine
