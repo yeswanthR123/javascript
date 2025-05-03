@@ -231,10 +231,130 @@ const restaurant = {
 //     )
 // );
 
-//Nullish coalesing operator (??) == it check for the null or undefine value
+// //Nullish coalesing operator (??) == it check for the null or undefine value
 
-restaurant.guest = 0;
-// const guest = restaurant.guest || 10;
-// console.log(guest); // As 0 is false guest is assigned 10 but it not logically correct
-const newGuest = restaurant.guest ?? 10;
-console.log(newGuest); // ?? -- check for the for null or undefine
+// restaurant.guest = 0;
+// // const guest = restaurant.guest || 10;
+// // console.log(guest); // As 0 is false guest is assigned 10 but it not logically correct
+// const newGuest = restaurant.guest ?? 10;
+// console.log(newGuest); // ?? -- check for the for null or undefine
+
+// //OR Assignment operator
+// const rest1 = {
+//   name: "Thalapakati Briyani",
+//   guest: 0,
+// };
+
+// const rest2 = {
+//   name: "Anjaper Hotel",
+//   owner: "naidu",
+// };
+
+// // add guest to all the rest objects
+
+// // rest1.guest = rest1.guest || 10;
+// // rest2.guest = rest2.guest || 10;
+
+// // rest1.guest ||= 10;
+// // rest2.guest ||= 10;
+
+// //Nullish assignment operator
+
+// // rest1.guest ??= 10;
+// // rest2.guest ??= 10;
+// // console.log(rest1, rest2);
+
+// //AND Assignment operator
+
+// rest1.owner &&= "<Anonymous>";
+// rest2.owner &&= "<Anonymous>";
+
+// console.log(rest1, rest2);
+
+// //CHALLENGE #1
+// const game = {
+//   team1: "Bayern Munich",
+//   team2: "Borrussia Dortmund",
+//   players: [
+//     [
+//       "Neuer",
+//       "Pavard",
+//       "Martinez",
+//       "Alaba",
+//       "Davies",
+//       "Kimmich",
+//       "Goretzka",
+//       "Coman",
+//       "Muller",
+//       "Gnarby",
+//       "Lewandowski",
+//     ],
+//     [
+//       "Burki",
+//       "Schulz",
+//       "Hummels",
+//       "Akanji",
+//       "Hakimi",
+//       "Weigl",
+//       "Witsel",
+//       "Hazard",
+//       "Brandt",
+//       "Sancho",
+//       "Gotze",
+//     ],
+//   ],
+//   score: "4:0",
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+//   date: "Nov 9th, 2037",
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// //TASK -1
+// const [players1, players2] = game.players;
+// console.log(players1, players2);
+
+// //TASK -2
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk);
+// console.log(fieldPlayers);
+
+// //TASK -3
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// //TASK -4
+// const players1Final = [...players1, "Thiago", "Coutinho", "Perisic"];
+// console.log(players1Final);
+
+// //TASK -5
+// const { team1, x: draw, team2 } = game.odds;
+// console.log(team1, draw, team2);
+
+// //TASK -6
+// const printGoals = function (...player) {
+//   console.log(`${player.length} goals where scored`);
+//   for (let i = 0; i < player.length; i++) {
+//     console.log(player[i]);
+//   }
+// };
+
+// printGoals(...game.scored);
+
+// //TASK -7
+// team1 < team2 && console.log("Team 1 is more likely to win");
+// team2 < team2 && console.log("Team 2 is more likely to win");
+
+// FOR-OF LOOP
+
+const menus = [...restaurant.mainMenu, ...restaurant.starterMenu];
+
+for (let items of menus) {
+  items = "new item";
+  console.log(items);
+}
+
+console.log(menus);
